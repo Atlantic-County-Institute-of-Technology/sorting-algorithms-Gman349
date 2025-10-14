@@ -1,8 +1,20 @@
 import random
 import inquirer3
+from inquirer3.themes import *
 from bubble_sort import bubble_sort
-from insertion_sort import *
+from insertion_sort import insertion_sort
 from selection_sort import *
+
+
+def qstns(num1):
+    minm = get_integer_input("Minimum random number:")
+    maxm = get_integer_input("Maximum random number:")
+    r_num = get_integer_input2("How many numbers in the list?")
+    num1 = str([random.randint(minm, maxm) for i in range(r_num)])
+    return num1
+
+
+num = ""
 
 
 def get_integer_input(prompt):
@@ -15,6 +27,8 @@ def get_integer_input(prompt):
             return value
         except ValueError:
             print("Please enter a number.")
+
+
 def get_integer_input2(prompt):
     while True:
         try:
@@ -26,8 +40,10 @@ def get_integer_input2(prompt):
         except ValueError:
             print("Please enter a number.")
 
+
 def main():
     while True:
+
         questions = [
             inquirer3.List('menu',
                            message="What would you like to do?",
@@ -40,14 +56,13 @@ def main():
             case "Exit":
                 exit()
             case "Use Bubble sort":
-                min = get_integer_input("minimum random number:")
-                max = get_integer_input("maximum random number:")
-                r_num = get_integer_input2("How many numbers in the list?")
-                num = [random.randint(min, max) for i in range(r_num)]
+                qstns(num)
                 bubble_sort(num)
                 print(f"after {num}")
-            # case "Use Insertion sort":
-            #
+            case "Use Insertion sort":
+                qstns(num)
+                insertion_sort(num)
+                print(f"after {num}")
             # case "Use selection sort":
 
 
