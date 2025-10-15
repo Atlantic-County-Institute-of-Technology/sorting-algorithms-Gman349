@@ -1,20 +1,8 @@
 import random
 import inquirer3
-from inquirer3.themes import *
 from bubble_sort import bubble_sort
 from insertion_sort import insertion_sort
-from selection_sort import *
-
-
-def qstns(num1):
-    minm = get_integer_input("Minimum random number:")
-    maxm = get_integer_input("Maximum random number:")
-    r_num = get_integer_input2("How many numbers in the list?")
-    num1 = str([random.randint(minm, maxm) for i in range(r_num)])
-    return num1
-
-
-num = ""
+from selection_sort import selection_sort
 
 
 def get_integer_input(prompt):
@@ -56,14 +44,32 @@ def main():
             case "Exit":
                 exit()
             case "Use Bubble sort":
-                qstns(num)
-                bubble_sort(num)
-                print(f"after {num}")
+                minm = get_integer_input("Minimum random number:")
+                maxm = get_integer_input("Maximum random number:")
+                r_num = get_integer_input2("How many numbers in the list?")
+                if minm < maxm:
+                    num = [random.randint(minm, maxm) for i in range(r_num)]
+                    bubble_sort(num)
+                else:
+                    print("Please put the smallest number first")
             case "Use Insertion sort":
-                qstns(num)
-                insertion_sort(num)
-                print(f"after {num}")
-            # case "Use selection sort":
+                minm = get_integer_input("Minimum random number:")
+                maxm = get_integer_input("Maximum random number:")
+                r_num = get_integer_input2("How many numbers in the list?")
+                if minm < maxm:
+                    num = [random.randint(minm, maxm) for i in range(r_num)]
+                    insertion_sort(num)
+                else:
+                    print("Please put the smallest number first")
+            case "Use selection sort":
+                minm = get_integer_input("Minimum random number:")
+                maxm = get_integer_input("Maximum random number:")
+                r_num = get_integer_input2("How many numbers in the list?")
+                if minm < maxm:
+                    num = [random.randint(minm, maxm) for i in range(r_num)]
+                    selection_sort(num)
+                else:
+                    print("Please put the smallest number first")
 
 
 if __name__ == "__main__":
