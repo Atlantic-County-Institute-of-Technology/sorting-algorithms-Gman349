@@ -2,10 +2,10 @@ import time
 
 
 def selection_sort(numbers):
+    num_before = str(numbers)
     lc = 0
     sc = 0
     start_time = time.time()
-    print(f"before {numbers}")
     n = len(numbers)
     for ind in range(n):
         lc = lc + 1
@@ -19,6 +19,7 @@ def selection_sort(numbers):
         (numbers[ind], numbers[min_index]) = (numbers[min_index], numbers[ind])
     end_time = time.time()
     elapsed_time = end_time - start_time
+    print(f"before {num_before}")
     print(f"after {numbers}")
     print(f"Loop count: {lc}")
     print(f"Sorting actions: {sc}")

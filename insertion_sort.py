@@ -2,10 +2,10 @@ import time
 
 
 def insertion_sort(numbers):
+    num_before = str(numbers)
     lc = 0
     sc = 0
     start_time = time.time()
-    print(f"before {numbers}")
     n = len(numbers)
     if n <= 1:
         return
@@ -20,6 +20,7 @@ def insertion_sort(numbers):
         sc = sc + 1
     end_time = time.time()
     elapsed_time = end_time - start_time
+    print(f"before {num_before}")
     print(f"after {numbers}")
     print(f"Loop count: {lc}")
     print(f"Sorting actions: {sc}")

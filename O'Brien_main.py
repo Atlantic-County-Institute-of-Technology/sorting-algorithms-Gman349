@@ -47,29 +47,46 @@ def main():
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm:
+                if minm < maxm and r_num <= 18500:
+                    if r_num > 10000:
+                        print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]
                     bubble_sort(num)
                 else:
-                    print("Please put the smallest number first")
+                    if r_num > 18500:
+                        print("Please use a smaller amount of numbers in the list")
+                    else:
+                        print("Please put the smallest number first")
             case "Use Insertion sort":
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm:
+                if minm < maxm and r_num <= 34000:
+                    if r_num > 20000:
+                        print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]
                     insertion_sort(num)
                 else:
-                    print("Please put the smallest number first")
+                    if r_num > 34000:
+                        print("Please use a smaller amount of numbers in the list")
+
+                    else:
+                        print("Please put the smallest number first")
+
             case "Use selection sort":
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm:
+                if minm < maxm and r_num <= 25000:
+                    if r_num > 15000:
+                        print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]
                     selection_sort(num)
                 else:
-                    print("Please put the smallest number first")
+                    if r_num > 25000:
+                        print("Please use a smaller amount of numbers in the list")
+                    else:
+                        print("Please put the smallest number first")
 
 
 if __name__ == "__main__":
