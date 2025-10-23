@@ -47,7 +47,7 @@ def main():
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm and r_num <= 18500:
+                if minm <= maxm and r_num <= 18500:
                     if r_num > 10000:
                         print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]
@@ -61,7 +61,7 @@ def main():
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm and r_num <= 34000:
+                if minm <= maxm and r_num <= 34000:
                     if r_num > 20000:
                         print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]
@@ -77,7 +77,7 @@ def main():
                 minm = get_integer_input("Minimum random number:")
                 maxm = get_integer_input("Maximum random number:")
                 r_num = get_integer_input2("How many numbers in the list?")
-                if minm < maxm and r_num <= 25000:
+                if minm <= maxm and r_num <= 25000:
                     if r_num > 15000:
                         print("WARNING: MAY TAKE LONGER THAN 10 SECONDS")
                     num = [random.randint(minm, maxm) for i in range(r_num)]

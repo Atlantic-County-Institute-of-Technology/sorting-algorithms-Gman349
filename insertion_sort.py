@@ -14,10 +14,11 @@ def insertion_sort(numbers):
         key = numbers[i]
         j = i - 1
         while j >= 0 and key < numbers[j]:
+            sc = sc + 1
             numbers[j + 1] = numbers[j]
             j -= 1
         numbers[j + 1] = key
-        sc = sc + 1
+
     end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"before {num_before}")
